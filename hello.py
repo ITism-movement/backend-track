@@ -1,1 +1,3 @@
-print('Hello, ITISM!')
+name = 'Itism'
+for i in range(5):
+    print('Hello, {}!'.format(name))
