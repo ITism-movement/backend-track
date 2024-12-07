@@ -1,5 +1,5 @@
 name = 'Itism'
-for i in range(5):
+for i in range(len(name):
     print('Hello, {}!'.format(name))
 
 print('Bye!')
