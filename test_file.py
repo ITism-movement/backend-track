@@ -1,2 +1,1 @@
-rwgwrpnvkwsdvw[in
-rbrw
+print('1')
