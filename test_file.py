@@ -1,4 +1,3 @@
-a = input("Please enter first number: ")
-b = input("Please enter second number: ")
-sum_ab = a + b
-print("The sum of a and b is", sum_ab)
+itism = ['I', 't', 'i', 's', 'm']
+
+print(''.join(itism))
