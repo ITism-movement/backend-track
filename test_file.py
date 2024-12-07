@@ -5,5 +5,5 @@ print('The end.')
 a = input("Please enter first number: ")
 b = input("Please enter second number: ")
 sum_ab = a + b
-# This is Zarina's comment
+# I am Kamil, hello there! Created in collaboration with Zarina
 print("a and b is", sum_ab)
