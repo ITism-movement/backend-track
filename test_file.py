@@ -7,6 +7,11 @@ b = input("Please enter second number: ")
 sum_ab = a + b
 #commented by Ilia
 #321 comment by Lera
-# This is Zarina's comment
-# 123 commented by Ivan
+#This is Zarina's comment
+#123 commented by Ivan
 print("a and b is", sum_ab)
+my_list = list()
+my_tuple = (1, 2, 3)
+my_set = {[]}
+my_dict = {}
+print(set)
