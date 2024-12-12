@@ -17,12 +17,20 @@ a = 1
 
 
 def defined(func, first=1000, second=1):
+    print("Try to call object from func variable:", func)
     return func(first, second)
 
 def multiplier(a, b):
     return a * b
 
-# print(defined(multiplier(10,10),10,10))
+
+def summarizer(a, b):
+    return a + b
+
+
+# print(defined(multiplier, 10, 10))
+# print(defined(print, 10, 10))
+# print(defined(summarizer, 10, 10))
 # res = defined()
 # print(res)
 
@@ -33,11 +41,21 @@ def multiplier(a, b):
 # print(b, f)
 # print(b(first=100), f(first=200))
 
+
 def print_message():
-    print('Привет, мир.')
+    # print('Привет, мир.')
     def print_greeting():
         print('Привет, программист.')
-    return print_greeting
+    return str.split
 
-print(print_message())
 
+# print(print_message())
+
+
+# print(print, type(print))
+# print(print_message)
+# print(print_message())
+# print(sum)
+# print(print)
+# print(divmod)
+# print(type)
