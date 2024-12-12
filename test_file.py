@@ -22,7 +22,7 @@ def defined(func, first=1000, second=1):
 def multiplier(a, b):
     return a * b
 
-print(defined(multiplier,10,10))
+# print(defined(multiplier(10,10),10,10))
 # res = defined()
 # print(res)
 
@@ -32,4 +32,12 @@ print(defined(multiplier,10,10))
 # b = defined
 # print(b, f)
 # print(b(first=100), f(first=200))
+
+def print_message():
+    print('Привет, мир.')
+    def print_greeting():
+        print('Привет, программист.')
+    return print_greeting
+
+print(print_message())
 
