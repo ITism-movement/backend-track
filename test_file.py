@@ -24,11 +24,17 @@ def multiplier(a, b):
     return a * b
 
 
-def summarizer(a, b):
-    return a + b
+def summarizer(power, a, *args, **kwargs):
+    sum_num = 0
+    for i_elem in args:
+        sum_num += i_elem ** power
+    return sum_num
 
 
-print(defined(multiplier,summarizer,10))
+print(summarizer(1,1, 2, 3, c=1, b=2))
+
+
+# print(defined(multiplier,summarizer,10))
 # print(defined(print, 10, 10))
 # print(defined(summarizer, 10, 10))
 # res = defined()
@@ -70,4 +76,4 @@ def make_request(url):
     print(f"Делаю запрос на {url}")
     return 123
 
-print(make_request(456))
+# print(make_request(456))
