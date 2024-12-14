@@ -28,6 +28,9 @@ def summarizer(power, a, *args, **kwargs):
     sum_num = 0
     for i_elem in args:
         sum_num += i_elem ** power
+    for key in kwargs:
+        sum_num += kwargs[key] ** power
+
     return sum_num
 
 
