@@ -16,9 +16,9 @@ a = 1
 # print(type(a))
 
 
-def defined(func, first=1000, second=1):
-    print("Try to call object from func variable:", func)
-    return func(first, second)
+def defined(func, my_func, first=1000, second=1):
+    # print("Try to call object from func variable:", func)
+    return func(first, second) - my_func(first, second)
 
 def multiplier(a, b):
     return a * b
@@ -28,7 +28,7 @@ def summarizer(a, b):
     return a + b
 
 
-# print(defined(multiplier, 10, 10))
+print(defined(multiplier,summarizer,10))
 # print(defined(print, 10, 10))
 # print(defined(summarizer, 10, 10))
 # res = defined()
@@ -59,3 +59,15 @@ def print_message():
 # print(print)
 # print(divmod)
 # print(type)
+def deco(func):
+    def wrapper(url):
+        print("Покупайте наших котиков")
+        return func(url)
+    return wrapper
+
+@deco
+def make_request(url):
+    print(f"Делаю запрос на {url}")
+    return 123
+
+print(make_request(456))
