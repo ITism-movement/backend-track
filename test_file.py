@@ -83,3 +83,35 @@ print((lambda a, b: a*b)(5,6))
 #
 # # print(make_request(456))
 
+
+def lost_horse():
+    print("Конь потерян!")
+
+
+def lost_mind():
+    print("Рассудок потерян!")
+
+
+def lost_life():
+    print("Жизнь потеряна!")
+
+
+direction_mapper = {
+    "L": lost_horse,
+    "R": lost_mind,
+    "S": lost_life
+}
+
+
+user_input = input("Введите желаемое направление: L/R/S\n").upper()
+func = direction_mapper.get(user_input, lambda: print("Нет такого направления!"))
+func()
+
+# if user_input == "L":
+#     lost_horse()
+# elif user_input == "R":
+#     lost_mind()
+# elif user_input == "S":
+#     lost_life()
+# else:
+#     print("Нет такого направления!")
