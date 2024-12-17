@@ -86,6 +86,21 @@ print((lambda a, b: a*b)(5,6))
 #
 # # print(make_request(456))
 
+def discount(func):
+    def inner(*args):
+        return func(*args) * 0.6
+    return inner
+
+# @discount
+def calculate_price(себестоимость, наценка):
+    return себестоимость + наценка
+
+res = discount(calculate_price)
+res_from_func = res(500, 500)
+print(res_from_func)
+
+
+# print(calculate_price)
 
 def lost_horse():
     print("Конь потерян!")
@@ -98,21 +113,11 @@ def lost_mind():
 def lost_life():
     print("Жизнь потеряна!")
 
-def discount(func):
-    def inner(*args):
-        return func(*args) * 0.6
-    return inner
-
-# @discount
-def calculate_price(себестоимость, наценка):
-    return себестоимость + наценка
-
 direction_mapper = {
     "L": lost_horse,
     "R": lost_mind,
     "S": lost_life
 }
-
 
 user_input = input("Введите желаемое направление: L/R/S\n").upper()
 func = direction_mapper.get(user_input, lambda: print("Нет такого направления!"))
@@ -127,9 +132,3 @@ func()
 # else:
 #     print("Нет такого направления!")
 
-res = discount(calculate_price)
-res_from_func = res(500, 500)
-print(res_from_func)
-
-
-# print(calculate_price)
