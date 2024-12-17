@@ -22,7 +22,7 @@ def defined(func, first=1000, second=1):
 def multiplier(a, b):
     return a * b
 
-print(defined(multiplier,10,10))
+# print(defined(multiplier,10,10))
 # res = defined()
 # print(res)
 
@@ -33,3 +33,18 @@ print(defined(multiplier,10,10))
 # print(b, f)
 # print(b(first=100), f(first=200))
 
+def discount(func):
+    def inner(*args):
+        return func(*args) * 0.6
+    return inner
+
+# @discount
+def calculate_price(себестоимость, наценка):
+    return себестоимость + наценка
+
+res = discount(calculate_price)
+res_from_func = res(500, 500)
+print(res_from_func)
+
+
+# print(calculate_price)
