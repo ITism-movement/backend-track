@@ -33,21 +33,23 @@
 # print(new_order)
 
 # Декоратор 3 Рамка вокруг приветствия
-def frame(func):
-    def wrapper(*args):
-        name = f"*{func(*args)}*"
-        message_length = len(name)
-        star_line = "*"*message_length
-        return "\n".join([star_line,name,star_line])
-    return wrapper
-
-@frame
-def new_user(name):
-    return f"Hi {name}!"
-print(new_user("ITism"))
+# def frame(func):
+#     def wrapper(*args):
+#         name = f"*{func(*args)}*"
+#         message_length = len(name)
+#         star_line = "*"*message_length
+#         return "\n".join([star_line,name,star_line])
+#     return wrapper
+#
+# @frame
+# def new_user(name):
+#     return f"Hi {name}!"
+# print(new_user("ITism"))
 
 def decorator(func):
     def wrapper(*args,**kwargs):
+        print("До")
         result = func(*args,**kwargs)
+        print("После")
         return result
     return wrapper
