@@ -46,10 +46,31 @@
 #     return f"Hi {name}!"
 # print(new_user("ITism"))
 
+# def decorator(func):
+#     def wrapper(*args,**kwargs):
+#         print("До")
+#         result = func(*args,**kwargs)
+#         print("После")
+#         return result
+#     return wrapper
+
+num_1 = list()
+
+
 def decorator(func):
+    num_2 = 0
     def wrapper(*args,**kwargs):
-        print("До")
+        num_1.append(1)
+        nonlocal num_2
+        num_2 += 1
         result = func(*args,**kwargs)
-        print("После")
+        print(num_2)
         return result
+    print(num_2)
     return wrapper
+
+@decorator
+def sum_nums(a,b):
+    return a + b
+
+print(sum_nums(1,4))
